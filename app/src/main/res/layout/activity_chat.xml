@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChatActivity">
+
+    <LinearLayout
+        android:id="@+id/üst"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="42dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/back1" />
+
+        <TextView
+            android:id="@+id/chatUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="6"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatRecycl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/alt"
+        android:layout_below="@+id/üst"
+        android:background="@drawable/msgback">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/alt"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:hint="Mesaj"
+            android:id="@+id/textMesaj"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/sendImage"
+            android:layout_height="50dp"
+            android:background="@drawable/send_media"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/sendTextMsg"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/send1" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
